@@ -1,0 +1,12 @@
+<div appShowErase class="item">
+  
+    <mat-checkbox [(ngModel)]='value.state' 
+    (change)='onChange(value)'
+    [ngClass] = "{ 'italic': value.state, 'nonItalic': !value.state }">
+            {{value.title}}
+    </mat-checkbox>
+    <button mat-icon-button color="warn" (click)='onDeleteItem(value)' style='display: none; text-align: right ;'>
+        <mat-icon aria-label="delete" >delete_forever</mat-icon>
+    </button>
+
+</div>
